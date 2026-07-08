@@ -42,7 +42,6 @@ Ouvrez le fichier dans un navigateur sur la machine RetroBat : le titre suit le 
 const client = new APIExposeClient({
   host: '127.0.0.1',
   port: 12345,          // REST + WebSocket APIExpose
-  esPort: 1234,         // API HTTP EmulationStation (URLs de médias)
   streams: null,        // null = firehose /ws unique ; ou ['score','timer','frontend']
   autoReconnect: true,
   reconnectDelayMs: 1000,

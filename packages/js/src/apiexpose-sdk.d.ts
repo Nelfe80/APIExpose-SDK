@@ -23,11 +23,6 @@ export interface APIExposeOptions {
   reconnectDelayMs?: number;
   /** Backoff ceiling in ms. Default `15000`. */
   maxReconnectDelayMs?: number;
-  /**
-   * EmulationStation HTTP API port, used by `mediaUrl()` for
-   * `/systems/<sys>/games/<id>/media/<type>` URLs. Default `1234`.
-   */
-  esPort?: number;
   /** Diagnostic logger; the SDK is silent by default. */
   log?: ((level: 'info' | 'warn' | 'error', message: string) => void) | null;
 }
@@ -108,9 +103,9 @@ export declare class APIExposeClient {
   getMameOutputs(): Promise<unknown>;
 
   /**
-   * Absolute URL for a media path returned by the API.
-   * `/systems/<sys>/games/<id>/media/<type>` paths are served by EmulationStation
-   * (port `esPort`); anything else goes through APIExpose `/api/v1/media/<path>`.
+   * Absolute URL for a media path returned by the API. APIExpose is the single
+   * consolidated media source: paths resolve to `/api/v1/media/<path>`
+   * (absolute `http(s)` URLs pass through unchanged).
    */
   mediaUrl(path: string | null | undefined): string | null;
 

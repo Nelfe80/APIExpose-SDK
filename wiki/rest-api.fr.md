@@ -31,13 +31,17 @@ async function currentGameOrNull(client) {
 
 ## URLs de médias — `mediaUrl(path)`
 
-Les `details` d'un jeu contiennent deux familles de chemins ; `mediaUrl()` résout les deux en URLs absolues :
+**APIExpose est la source média unique.** Son media store canonique consolide et enrichit tout (artwork, wheels, marquees, mixes, manuels, vidéos…), et `details.*` / `details.extras.*` exposent des URLs `/api/v1/media/...` prêtes à l'emploi :
 
-| Entrée | Résolue vers | Servie par |
-|---|---|---|
-| `/systems/<sys>/games/<id>/media/<type>` (gamelist `details`) | `http://host:1234/…` | API HTTP EmulationStation |
-| tout autre chemin relatif (ex. `systems/arcade/games/mercs/artwork/ic/ic-1-left.png`) | `http://host:12345/api/v1/media/…` | media store APIExpose |
-| `http(s)://…` absolu | inchangé | — |
+```json
+{
+  "image":   "/api/v1/media/systems/megadrive/games/sonic_the_hedgehog/artwork/screentitle.png",
+  "marquee": "/api/v1/media/systems/megadrive/games/sonic_the_hedgehog/ui/wheels/wheel.png",
+  "extras":  { "cartridge": "/api/v1/media/systems/megadrive/games/sonic_the_hedgehog/artwork/cartridge.png" }
+}
+```
+
+`mediaUrl()` transforme n'importe laquelle (ou tout chemin relatif au media store) en URL absolue ; les entrées `http(s)://` absolues passent inchangées :
 
 ```js
 const game = await client.getCurrentGame();

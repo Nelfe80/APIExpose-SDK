@@ -38,8 +38,6 @@ const DEFAULTS = Object.freeze({
   autoReconnect: true,
   reconnectDelayMs: 1000,
   maxReconnectDelayMs: 15000,
-  /** EmulationStation HTTP API port — serves the /systems/<sys>/games/<id>/media/<type> URLs. */
-  esPort: 1234,
   /** Called with (level, message) for internal diagnostics; default silent. */
   log: null
 });
@@ -331,19 +329,16 @@ export class APIExposeClient {
   getMameOutputs() { return this._get('/api/v1/outputs/mame'); }
 
   /**
-   * Absolute URL for a media path returned by the API.
-   * Two families exist:
-   *  - `/systems/<sys>/games/<id>/media/<type>` (gamelist `details.*`) is served
-   *    by EmulationStation's HTTP API on `esPort` (default 1234);
-   *  - any other relative path is served by APIExpose via `/api/v1/media/<path>`.
+   * Absolute URL for a media path returned by the API. APIExpose is the single
+   * consolidated media source: `details.*` and `details.extras.*` paths are
+   * `/api/v1/media/...` URLs served by its canonical media store; any other
+   * relative path is resolved against the same endpoint.
    */
   mediaUrl(path) {
     if (!path) return null;
     if (/^https?:\/\//i.test(path)) return path;
     const clean = String(path).replace(/^[\\/]+/, '').replace(/\\/g, '/');
-    if (/^systems\/[^/]+\/games\/[^/]+\/media\//i.test(clean)) {
-      return `http://${this.options.host}:${this.options.esPort}/${clean}`;
-    }
+    if (/^api\/v1\/media\//i.test(clean)) return `${this.baseUrl}/${clean}`;
     return `${this.baseUrl}/api/v1/media/${clean}`;
   }
 

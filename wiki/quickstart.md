@@ -42,7 +42,6 @@ Open the file in a browser on the RetroBat machine: the title follows the game s
 const client = new APIExposeClient({
   host: '127.0.0.1',
   port: 12345,          // APIExpose REST + WebSocket
-  esPort: 1234,         // EmulationStation HTTP API (media URLs)
   streams: null,        // null = single /ws firehose; or ['score','timer','frontend']
   autoReconnect: true,
   reconnectDelayMs: 1000,

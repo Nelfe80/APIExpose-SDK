@@ -40,7 +40,7 @@ const report = await client.doctor();
 | REST calls fail in the browser, `curl` works | APIExpose 1.1.1 without CORS | update APIExpose (post-1.1.1) |
 | `connection.lost` immediately, never restores | APIExpose not running / wrong port | check `http://127.0.0.1:12345/api/v1/health` |
 | `getCurrentGame()` throws 404 | empty context right after APIExpose start | fall back to `getState()` (see [REST API](rest-api.md)) |
-| Artwork 404 | media path family mixed up | always go through `mediaUrl()`; gamelist URLs are served by ES on port 1234 |
+| Artwork 404 | media not in the APIExpose store, or hand-built URL | always go through `mediaUrl()` on `details.*` values; APIExpose is the single media source (`/api/v1/media/...`) |
 | No `score.changed` / `timer.changed` | system without score support, or nothing running | check the debug monitor for `score.live.*` |
 | Events stop after RetroBat restart | none — the SDK reconnects | wait for `connection.restored` (verify in the monitor) |
 | Page does nothing at all as `file://` in a strict browser profile | ES module loading restrictions | serve the folder over `http://` or use OBS's Local file mode |
