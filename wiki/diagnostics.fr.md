@@ -2,7 +2,7 @@
 
 ## Event Debug Monitor
 
-[`samples/html/event-debug-monitor`](https://github.com/Nelfe80/APIExpose-SDK/tree/main/samples/html/event-debug-monitor) est le compagnon de diagnostic : ouvrez-le dans un navigateur (ou un dock OBS) et vous voyez
+[`samples/html/event-debug-monitor`](https://github.com/Nelfe80/APIExpose-SDK/tree/main/samples/html/event-debug-monitor) est le compagnon de diagnostic : ouvrez-le dans un navigateur et vous voyez
 
 - l'état de connexion et l'URL de base de l'API,
 - un rapport de capabilities sur une ligne (`apiexpose=<version> sdk=<version> | health:yes context:yes …`),
@@ -18,7 +18,7 @@ Sonde les endpoints optionnels et rapporte ce que cette installation répond **m
 const caps = await client.getCapabilities();
 // { apiExposeVersion: "1.1.1+…", sdkVersion: "0.1.0",
 //   endpoints: { health: true, context: true, panels: true,
-//                hiscores: true, retroachievements: true, mameOutputs: true } }
+//                hiscores: true, retroachievements: true } }
 ```
 
 Les capabilities sont **dépendantes du contexte** : `panels` répond 404 sans jeu sélectionné, `hiscores` répond 400 sans jeu supporté, `retroachievements` dépend du compte configuré. Un `false` peut vouloir dire « pas maintenant », pas « jamais » — resondez après `game.changed`. Schéma : [`schemas/capabilities.schema.json`](https://github.com/Nelfe80/APIExpose-SDK/blob/main/schemas/capabilities.schema.json).
@@ -43,4 +43,4 @@ const report = await client.doctor();
 | Visuels en 404 | média absent du store APIExpose, ou URL construite à la main | passez toujours par `mediaUrl()` sur les valeurs `details.*` ; APIExpose est la source média unique (`/api/v1/media/...`) |
 | Pas de `score.changed` / `timer.changed` | système sans support de score, ou rien ne tourne | vérifier `score.live.*` dans le debug monitor |
 | Les événements s'arrêtent après un redémarrage de RetroBat | aucune — le SDK se reconnecte | attendre `connection.restored` (vérifiable dans le monitor) |
-| La page ne fait rien en `file://` dans un profil navigateur strict | restrictions de chargement des modules ES | servir le dossier en `http://` ou utiliser le mode Fichier local d'OBS |
+| La page ne fait rien en `file://` dans un profil navigateur strict | restrictions de chargement des modules ES | servir le dossier en `http://` |

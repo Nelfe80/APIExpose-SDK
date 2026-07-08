@@ -68,7 +68,7 @@ See [Events](events.md) for the full list.
 
 ## 5. Try the samples
 
-The three samples in [`samples/html`](https://github.com/Nelfe80/APIExpose-SDK/tree/main/samples/html) run as plain files or [OBS Browser Sources](obs-overlay.md):
+The three samples in [`samples/html`](https://github.com/Nelfe80/APIExpose-SDK/tree/main/samples/html) run as plain files in any browser:
 
 - **now-playing-basic** — game name, system and artwork card.
 - **score-basic** — live score + timer HUD.

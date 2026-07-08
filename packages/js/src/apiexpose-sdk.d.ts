@@ -100,7 +100,6 @@ export declare class APIExposeClient {
   getRetroAchievementsStatus(): Promise<unknown>;
   getRetroAchievementsSession(): Promise<unknown>;
   getCurrentPanel(): Promise<unknown>;
-  getMameOutputs(): Promise<unknown>;
 
   /**
    * Absolute URL for a media path returned by the API. APIExpose is the single

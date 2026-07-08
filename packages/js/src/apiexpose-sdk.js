@@ -2,7 +2,7 @@
  * APIExpose SDK for JavaScript — Data/Event client for APIExpose (RetroBat).
  *
  * Zero-build ES module: import it directly from a <script type="module"> in any
- * browser or OBS Browser Source, no npm, no bundler required.
+ * browser, no npm, no bundler required.
  *
  *   import { APIExposeClient } from './apiexpose-sdk.js';
  *   const client = new APIExposeClient();
@@ -325,9 +325,6 @@ export class APIExposeClient {
   /** Resolved control-panel layout for the current game (buttons, colors). */
   getCurrentPanel() { return this._get('/api/v1/panels/current'); }
 
-  /** Latest MAME output signals (lamps…). */
-  getMameOutputs() { return this._get('/api/v1/outputs/mame'); }
-
   /**
    * Absolute URL for a media path returned by the API. APIExpose is the single
    * consolidated media source: `details.*` and `details.extras.*` paths are
@@ -356,8 +353,7 @@ export class APIExposeClient {
       probe('context', '/api/v1/context/state'),
       probe('panels', '/api/v1/panels/current'),
       probe('hiscores', '/api/v1/hiscores'),
-      probe('retroachievements', '/api/retroachievements/status'),
-      probe('mameOutputs', '/api/v1/outputs/mame')
+      probe('retroachievements', '/api/retroachievements/status')
     ]);
     let version = null;
     try {

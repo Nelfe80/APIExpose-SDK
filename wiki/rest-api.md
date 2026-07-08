@@ -12,7 +12,9 @@ All helpers return promises and throw on HTTP errors (including 404 when no cont
 | `getRetroAchievementsStatus()` | `GET /api/retroachievements/status` | account/link status |
 | `getRetroAchievementsSession()` | `GET /api/retroachievements/session` | live session (game, unlocks, hardcore…) |
 | `getCurrentPanel()` | `GET /api/v1/panels/current` | resolved control-panel layout (404 without a game) |
-| `getMameOutputs()` | `GET /api/v1/outputs/mame` | latest MAME output signals |
+
+!!! note "Arcade outputs are event-only"
+    Arcade/MAME output signals (lamps…) change too fast for a REST snapshot to be meaningful. Subscribe to `arcade.output.changed` instead — see [Events](events.md).
 
 ## Context lifecycle
 

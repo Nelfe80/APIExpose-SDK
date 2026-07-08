@@ -24,8 +24,7 @@
         "context": { "type": "boolean" },
         "panels": { "type": "boolean" },
         "hiscores": { "type": "boolean" },
-        "retroachievements": { "type": "boolean" },
-        "mameOutputs": { "type": "boolean" }
+        "retroachievements": { "type": "boolean" }
       },
       "additionalProperties": { "type": "boolean" }
     }

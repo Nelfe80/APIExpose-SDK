@@ -23,5 +23,4 @@ SOFTWARE.
 ---
 
 Note: this MIT license covers the APIExpose SDK only (clients, schemas, basic
-samples). APIExpose Core keeps its own license, and premium overlays, themes,
-designers and commercial packs belong to the separate Retro Creator product.
+samples). APIExpose Core keeps its own license.

@@ -10,7 +10,7 @@ First public release — JavaScript SDK MVP.
 ### Added
 - `@apiexpose/sdk` zero-build ES module (`packages/js`): `APIExposeClient` with
   REST helpers (health, context/state, current game/system, hiscores,
-  RetroAchievements, panels, MAME outputs), WebSocket event bus with normalized
+  RetroAchievements, panels), WebSocket event bus with normalized
   aliases (`game.changed`, `score.changed`, `timer.changed`,
   `achievement.unlocked`, `arcade.output.changed`…), prefix wildcards
   (`retroachievements.*`, `*`), automatic reconnection with exponential backoff

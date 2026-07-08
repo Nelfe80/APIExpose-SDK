@@ -12,7 +12,9 @@ Tous les helpers retournent des promesses et lèvent une erreur sur les codes HT
 | `getRetroAchievementsStatus()` | `GET /api/retroachievements/status` | statut du compte |
 | `getRetroAchievementsSession()` | `GET /api/retroachievements/session` | session live (jeu, succès, hardcore…) |
 | `getCurrentPanel()` | `GET /api/v1/panels/current` | layout du panel résolu (404 sans jeu) |
-| `getMameOutputs()` | `GET /api/v1/outputs/mame` | dernières sorties MAME |
+
+!!! note "Les sorties arcade sont uniquement événementielles"
+    Les signaux de sortie arcade/MAME (lampes…) changent trop vite pour qu'un instantané REST ait un sens. Abonnez-vous plutôt à `arcade.output.changed` — voir [Événements](events.md).
 
 ## Cycle de vie du contexte
 

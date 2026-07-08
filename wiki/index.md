@@ -2,14 +2,14 @@
 
 Public **Data & Event SDK** for [RetroBat APIExpose](https://github.com/Nelfe80/RetroBat-APIExpose).
 
-APIExpose runs next to RetroBat/EmulationStation and exposes what is happening on the cabinet — the selected game, the running emulator, live scores and timers, RetroAchievements, MAME outputs, panel states — over a local REST API and WebSocket streams. This SDK is the supported way to consume that data from your own pages, overlays and tools.
+APIExpose runs next to RetroBat/EmulationStation and exposes what is happening on the cabinet — the selected game, the running emulator, live scores and timers, RetroAchievements, arcade outputs, panel states — over a local REST API and WebSocket streams. This SDK is the supported way to consume that data from your own pages and tools.
 
 ## What you get
 
-- **Zero-build JavaScript client** — one ES module, no bundler, no npm. Import it from a plain HTML file or an OBS Browser Source.
+- **Zero-build JavaScript client** — one ES module, no bundler, no npm. Import it from a plain HTML file.
 - **Event bus** — subscribe to raw APIExpose events, normalized aliases (`game.changed`, `score.changed`, `achievement.unlocked`…), prefix wildcards (`retroachievements.*`) or everything (`*`).
-- **REST helpers** — current game, frontend state, hiscores, RetroAchievements session, control-panel layout, MAME outputs, media URLs.
-- **Resilience** — automatic reconnection with exponential backoff; your overlay can start before RetroBat does.
+- **REST helpers** — current game, frontend state, hiscores, RetroAchievements session, control-panel layout, media URLs.
+- **Resilience** — automatic reconnection with exponential backoff; your page can start before RetroBat does.
 - **Diagnostics** — `getCapabilities()`, `doctor()` and a ready-made [Event Debug Monitor](diagnostics.md) sample.
 
 ## Requirements
@@ -17,16 +17,15 @@ APIExpose runs next to RetroBat/EmulationStation and exposes what is happening o
 | Component | Version |
 |---|---|
 | APIExpose | ≥ 1.1.1 (browser REST calls additionally need the CORS update that follows 1.1.1) |
-| Browser / OBS | any modern engine (ES modules) |
+| Browser | any modern engine (ES modules) |
 
 APIExpose listens on `http://127.0.0.1:12345` (REST + WebSocket) on the RetroBat machine.
 
 ## Where to go next
 
-- [Quick start](quickstart.md) — first overlay in five minutes.
+- [Quick start](quickstart.md) — first integration in five minutes.
 - [Events](events.md) — event types, aliases and payloads.
 - [Streams](streams.md) — the WebSocket endpoints and their routing.
 - [REST API](rest-api.md) — the helpers and the endpoints behind them.
-- [OBS overlays](obs-overlay.md) — using the samples as Browser Sources.
 - [Diagnostics](diagnostics.md) — capabilities, doctor and troubleshooting.
-- [Scope & boundaries](boundaries.md) — what this SDK is, and what belongs to Retro Creator.
+- [Scope](boundaries.md) — what this SDK is.

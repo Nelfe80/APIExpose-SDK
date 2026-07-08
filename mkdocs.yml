@@ -1,5 +1,5 @@
 site_name: APIExpose SDK
-site_description: Public Data & Event SDK for RetroBat APIExpose — overlays, dashboards and integrations.
+site_description: Public Data & Event SDK for RetroBat APIExpose — dashboards and integrations.
 site_url: https://nelfe80.github.io/APIExpose-SDK/
 repo_url: https://github.com/Nelfe80/APIExpose-SDK
 repo_name: Nelfe80/APIExpose-SDK
@@ -52,9 +52,8 @@ plugins:
             Events: Événements
             Streams: Flux WebSocket
             REST API: API REST
-            OBS overlays: Overlays OBS
             Diagnostics: Diagnostics
-            Scope & boundaries: Périmètre du SDK
+            Scope: Périmètre
 
 markdown_extensions:
   - admonition
@@ -73,6 +72,5 @@ nav:
   - Events: events.md
   - Streams: streams.md
   - REST API: rest-api.md
-  - OBS overlays: obs-overlay.md
   - Diagnostics: diagnostics.md
-  - Scope & boundaries: boundaries.md
+  - Scope: boundaries.md

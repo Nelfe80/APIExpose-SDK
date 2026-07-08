@@ -68,7 +68,7 @@ Voir [Événements](events.md) pour la liste complète.
 
 ## 5. Essayer les samples
 
-Les trois samples de [`samples/html`](https://github.com/Nelfe80/APIExpose-SDK/tree/main/samples/html) fonctionnent en fichier local ou en [source navigateur OBS](obs-overlay.md) :
+Les trois samples de [`samples/html`](https://github.com/Nelfe80/APIExpose-SDK/tree/main/samples/html) fonctionnent en fichier local dans n'importe quel navigateur :
 
 - **now-playing-basic** — nom du jeu, système et visuel.
 - **score-basic** — HUD score + timer live.

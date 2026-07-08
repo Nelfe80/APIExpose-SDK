@@ -1,7 +1,7 @@
 {
   "name": "@apiexpose/sdk",
   "version": "0.1.0",
-  "description": "Data/Event SDK for APIExpose (RetroBat): REST + WebSocket client with auto-reconnect and normalized gameplay events. Zero build, OBS Browser Source ready.",
+  "description": "Data/Event SDK for APIExpose (RetroBat): REST + WebSocket client with auto-reconnect and normalized gameplay events. Zero build.",
   "type": "module",
   "main": "src/apiexpose-sdk.js",
   "module": "src/apiexpose-sdk.js",
@@ -21,7 +21,6 @@
     "retrobat",
     "apiexpose",
     "arcade",
-    "obs",
     "overlay",
     "retrogaming",
     "websocket",

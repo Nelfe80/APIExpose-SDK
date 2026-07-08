@@ -2,7 +2,7 @@
 
 ## Event Debug Monitor
 
-[`samples/html/event-debug-monitor`](https://github.com/Nelfe80/APIExpose-SDK/tree/main/samples/html/event-debug-monitor) is the diagnostics companion: open it in a browser (or an OBS dock) and you see
+[`samples/html/event-debug-monitor`](https://github.com/Nelfe80/APIExpose-SDK/tree/main/samples/html/event-debug-monitor) is the diagnostics companion: open it in a browser and you see
 
 - the connection state and API base URL,
 - a one-line capabilities report (`apiexpose=<version> sdk=<version> | health:yes context:yes …`),
@@ -18,7 +18,7 @@ Probes the optional endpoints and reports what this installation answers **right
 const caps = await client.getCapabilities();
 // { apiExposeVersion: "1.1.1+…", sdkVersion: "0.1.0",
 //   endpoints: { health: true, context: true, panels: true,
-//                hiscores: true, retroachievements: true, mameOutputs: true } }
+//                hiscores: true, retroachievements: true } }
 ```
 
 Capabilities are **context-dependent**: `panels` answers 404 with no game selected, `hiscores` answers 400 without a supported game, `retroachievements` depends on the configured account. A `false` can mean "not now", not "never" — re-probe after `game.changed`. Schema: [`schemas/capabilities.schema.json`](https://github.com/Nelfe80/APIExpose-SDK/blob/main/schemas/capabilities.schema.json).
@@ -43,4 +43,4 @@ const report = await client.doctor();
 | Artwork 404 | media not in the APIExpose store, or hand-built URL | always go through `mediaUrl()` on `details.*` values; APIExpose is the single media source (`/api/v1/media/...`) |
 | No `score.changed` / `timer.changed` | system without score support, or nothing running | check the debug monitor for `score.live.*` |
 | Events stop after RetroBat restart | none — the SDK reconnects | wait for `connection.restored` (verify in the monitor) |
-| Page does nothing at all as `file://` in a strict browser profile | ES module loading restrictions | serve the folder over `http://` or use OBS's Local file mode |
+| Page does nothing at all as `file://` in a strict browser profile | ES module loading restrictions | serve the folder over `http://` instead |
