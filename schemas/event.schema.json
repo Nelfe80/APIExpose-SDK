@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nelfe80.github.io/APIExpose-SDK/schemas/event.schema.json",
+  "title": "APIExpose event envelope",
+  "description": "Envelope broadcast by APIExpose on every WebSocket stream (ws://host:12345/ws and /ws/<stream>). Property names are PascalCase on the wire; SDK clients normalize them.",
+  "type": "object",
+  "required": ["Type"],
+  "properties": {
+    "Type": {
+      "type": "string",
+      "description": "Dot-separated event type. The prefix routes the event to a stream: ui.* -> frontend, score.live.* -> score, timer.live.* -> timer, retroachievements.* -> retroachievements, arcade./mame./fbneo./outputs.* -> arcade, panel./theme.* -> panel, ingame./retroarch./wrapper.* -> ingame, marquee.* -> marquee, topper.* -> topper, instruction-card.* -> instruction-card, screen.* -> screen, hiscore.* -> hiscore, media.* -> media, roms./rom-pack./romset.* -> roms, startup./health./version./hub./config./maintenance./rules./notifications.* -> system, commands./intent./es-control.* -> control, esevent.* -> esevent (only).",
+      "examples": [
+        "ui.game.selected.raw",
+        "score.live.changed",
+        "timer.live.changed",
+        "retroachievements.session.updated",
+        "retroachievements.achievement.unlock.confirmed",
+        "mame.output.changed",
+        "panel.state",
+        "instruction-card.snapshot",
+        "hiscore.updated"
+      ]
+    },
+    "Ts": {
+      "type": "string",
+      "format": "date-time",
+      "description": "UTC timestamp of the event."
+    },
+    "NodeId": {
+      "type": "string",
+      "description": "Identifier of the emitting node (multi-cabinet setups).",
+      "examples": ["cab-01"]
+    },
+    "CorrelationId": {
+      "type": "string",
+      "description": "GUID correlating related events."
+    },
+    "Payload": {
+      "description": "Event-specific payload. May be null. Shapes vary per Type; see the wiki Events page."
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nelfe80.github.io/APIExpose-SDK/schemas/capabilities.schema.json",
+  "title": "APIExpose SDK capabilities report",
+  "description": "Result of APIExposeClient.getCapabilities(): which optional endpoints this APIExpose installation answers right now. Some capabilities are context-dependent: panels and hiscores need a selected or running game, retroachievements needs a configured account.",
+  "type": "object",
+  "required": ["endpoints"],
+  "properties": {
+    "apiExposeVersion": {
+      "type": ["string", "null"],
+      "description": "Version reported by /api/v1/health, null when unreachable.",
+      "examples": ["1.1.1+20260708.000000.ca6efe8b"]
+    },
+    "sdkVersion": {
+      "type": "string",
+      "description": "Version of the SDK that produced the report.",
+      "examples": ["0.1.0"]
+    },
+    "endpoints": {
+      "type": "object",
+      "description": "Endpoint name -> reachable (HTTP success) at probe time.",
+      "properties": {
+        "health": { "type": "boolean" },
+        "context": { "type": "boolean" },
+        "panels": { "type": "boolean" },
+        "hiscores": { "type": "boolean" },
+        "retroachievements": { "type": "boolean" },
+        "mameOutputs": { "type": "boolean" }
+      },
+      "additionalProperties": { "type": "boolean" }
+    }
+  },
+  "additionalProperties": true
+}

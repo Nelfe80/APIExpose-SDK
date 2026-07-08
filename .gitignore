@@ -1,0 +1,28 @@
+# Product specs / cahiers des charges stay local.
+APIExpose_SDK_plan.md
+CAHIER_DES_CHARGES*
+*CDC*
+
+# Node / build leftovers (the SDK itself is zero-build, but consumers may install tooling)
+node_modules/
+dist/
+*.tgz
+
+# .NET (future C# SDK phase)
+bin/
+obj/
+*.user
+.vs/
+
+# Python (future Python SDK phase)
+__pycache__/
+*.pyc
+.venv/
+
+# Logs and local scratch
+*.log
+.log/
+.temp/
+
+# MkDocs build output
+site/

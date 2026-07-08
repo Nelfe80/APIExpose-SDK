@@ -1,0 +1,78 @@
+site_name: APIExpose SDK
+site_description: Public Data & Event SDK for RetroBat APIExpose — overlays, dashboards and integrations.
+site_url: https://nelfe80.github.io/APIExpose-SDK/
+repo_url: https://github.com/Nelfe80/APIExpose-SDK
+repo_name: Nelfe80/APIExpose-SDK
+docs_dir: wiki
+edit_uri: ""
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - content.code.copy
+    - search.highlight
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: Light mode
+  icon:
+    repo: fontawesome/brands/github
+
+plugins:
+  - search
+  - i18n:
+      docs_structure: suffix
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+        - locale: fr
+          name: Français
+          build: true
+          site_name: APIExpose SDK
+          nav_translations:
+            Home: Accueil
+            Quick start: Démarrage rapide
+            Events: Événements
+            Streams: Flux WebSocket
+            REST API: API REST
+            OBS overlays: Overlays OBS
+            Diagnostics: Diagnostics
+            Scope & boundaries: Périmètre du SDK
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.tabbed:
+      alternate_style: true
+
+nav:
+  - Home: index.md
+  - Quick start: quickstart.md
+  - Events: events.md
+  - Streams: streams.md
+  - REST API: rest-api.md
+  - OBS overlays: obs-overlay.md
+  - Diagnostics: diagnostics.md
+  - Scope & boundaries: boundaries.md

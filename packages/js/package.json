@@ -1,0 +1,41 @@
+{
+  "name": "@apiexpose/sdk",
+  "version": "0.1.0",
+  "description": "Data/Event SDK for APIExpose (RetroBat): REST + WebSocket client with auto-reconnect and normalized gameplay events. Zero build, OBS Browser Source ready.",
+  "type": "module",
+  "main": "src/apiexpose-sdk.js",
+  "module": "src/apiexpose-sdk.js",
+  "types": "src/apiexpose-sdk.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/apiexpose-sdk.d.ts",
+      "import": "./src/apiexpose-sdk.js"
+    }
+  },
+  "files": [
+    "src/apiexpose-sdk.js",
+    "src/apiexpose-sdk.d.ts",
+    "README.md"
+  ],
+  "keywords": [
+    "retrobat",
+    "apiexpose",
+    "arcade",
+    "obs",
+    "overlay",
+    "retrogaming",
+    "websocket",
+    "retroachievements"
+  ],
+  "author": "NelfeTech",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nelfe80/APIExpose-SDK.git",
+    "directory": "packages/js"
+  },
+  "homepage": "https://nelfe80.github.io/APIExpose-SDK/",
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,0 +1,53 @@
+/* Sober by design: this sample demonstrates the SDK, it is not a premium overlay. */
+html, body {
+  margin: 0;
+  background: transparent;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  overflow: hidden;
+}
+
+#card {
+  position: fixed;
+  left: 24px;
+  bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 18px 12px 12px;
+  background: rgba(16, 16, 24, 0.86);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  color: #e8e8f0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+#card.hidden {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+#art {
+  height: 64px;
+  max-width: 120px;
+  object-fit: contain;
+  border-radius: 6px;
+  display: none;
+}
+
+#art.visible { display: block; }
+
+#game {
+  font-size: 20px;
+  font-weight: 700;
+  max-width: 420px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#system {
+  font-size: 13px;
+  color: #9a9aa8;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
