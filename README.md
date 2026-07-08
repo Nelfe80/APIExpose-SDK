@@ -29,7 +29,7 @@ Public **Data & Event SDK** for [RetroBat APIExpose](https://github.com/Nelfe80/
 </script>
 ```
 
-Requires APIExpose **≥ 1.1.1** running on the same machine (its API listens on `http://127.0.0.1:12345`).
+Requires APIExpose **≥ 1.1.2** running on the same machine (its API listens on `http://127.0.0.1:12345`).
 
 ## Samples
 

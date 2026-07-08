@@ -37,7 +37,7 @@ const report = await client.doctor();
 
 | Symptôme | Cause probable | Correctif |
 |---|---|---|
-| Les appels REST échouent dans le navigateur, `curl` fonctionne | APIExpose 1.1.1 sans CORS | mettre à jour APIExpose (post-1.1.1) |
+| Les appels REST échouent dans le navigateur, `curl` fonctionne | APIExpose < 1.1.2 (pas de CORS) | mettre à jour APIExpose en 1.1.2+ |
 | `connection.lost` immédiat, jamais de restore | APIExpose arrêté / mauvais port | vérifier `http://127.0.0.1:12345/api/v1/health` |
 | `getCurrentGame()` lève un 404 | contexte vide juste après le démarrage d'APIExpose | replier sur `getState()` (voir [API REST](rest-api.md)) |
 | Visuels en 404 | média absent du store APIExpose, ou URL construite à la main | passez toujours par `mediaUrl()` sur les valeurs `details.*` ; APIExpose est la source média unique (`/api/v1/media/...`) |

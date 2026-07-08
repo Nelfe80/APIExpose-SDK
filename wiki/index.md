@@ -16,7 +16,7 @@ APIExpose runs next to RetroBat/EmulationStation and exposes what is happening o
 
 | Component | Version |
 |---|---|
-| APIExpose | ≥ 1.1.1 (browser REST calls additionally need the CORS update that follows 1.1.1) |
+| APIExpose | ≥ 1.1.2 |
 | Browser | any modern engine (ES modules) |
 
 APIExpose listens on `http://127.0.0.1:12345` (REST + WebSocket) on the RetroBat machine.

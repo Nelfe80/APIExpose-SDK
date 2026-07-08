@@ -26,6 +26,5 @@ First public release — JavaScript SDK MVP.
 - Bilingual wiki (EN/FR) deployed to GitHub Pages.
 
 ### Requires
-- APIExpose ≥ 1.1.1. Two improvements landed after the 1.1.1 release and ship
-  with the next one (or rebuild from `main`): CORS for browser REST calls, and
-  canonical `/api/v1/media/...` URLs in game `details`/`extras`.
+- APIExpose ≥ 1.1.2 (brings CORS for browser REST calls and canonical
+  `/api/v1/media/...` URLs in game `details`/`extras`).

@@ -37,7 +37,7 @@ const report = await client.doctor();
 
 | Symptom | Likely cause | Fix |
 |---|---|---|
-| REST calls fail in the browser, `curl` works | APIExpose 1.1.1 without CORS | update APIExpose (post-1.1.1) |
+| REST calls fail in the browser, `curl` works | APIExpose < 1.1.2 (no CORS) | update APIExpose to 1.1.2+ |
 | `connection.lost` immediately, never restores | APIExpose not running / wrong port | check `http://127.0.0.1:12345/api/v1/health` |
 | `getCurrentGame()` throws 404 | empty context right after APIExpose start | fall back to `getState()` (see [REST API](rest-api.md)) |
 | Artwork 404 | media not in the APIExpose store, or hand-built URL | always go through `mediaUrl()` on `details.*` values; APIExpose is the single media source (`/api/v1/media/...`) |

@@ -16,7 +16,7 @@ APIExpose tourne à côté de RetroBat/EmulationStation et expose ce qui se pass
 
 | Composant | Version |
 |---|---|
-| APIExpose | ≥ 1.1.1 (les appels REST depuis un navigateur nécessitent en plus la mise à jour CORS postérieure à la 1.1.1) |
+| APIExpose | ≥ 1.1.2 |
 | Navigateur | tout moteur moderne (modules ES) |
 
 APIExpose écoute sur `http://127.0.0.1:12345` (REST + WebSocket) sur la machine RetroBat.

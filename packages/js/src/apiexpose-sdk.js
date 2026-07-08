@@ -18,7 +18,7 @@
 export const SDK_VERSION = '0.1.0';
 
 /** Minimum APIExpose version this SDK is tested against. */
-export const MIN_APIEXPOSE_VERSION = '1.1.0';
+export const MIN_APIEXPOSE_VERSION = '1.1.2';
 
 /**
  * WebSocket streams exposed by APIExpose (`ws://host:port/ws/<stream>`).

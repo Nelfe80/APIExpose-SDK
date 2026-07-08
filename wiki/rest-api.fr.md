@@ -66,4 +66,4 @@ await fetch('http://127.0.0.1:12345/api/v1/commands/launch', {
     Les endpoints tap/combo de `EsController` fonctionnent, mais les endpoints de navigation `goto-system` / `goto-game` sont actuellement peu fiables. Préférez `commands/launch` pour l'automatisation.
 
 !!! note "CORS"
-    Les pages navigateur appellent cette API en cross-origin. APIExpose envoie `Access-Control-Allow-Origin: *` à partir de la mise à jour qui suit la 1.1.1 ; sur une 1.1.1 brute, les appels REST depuis un navigateur sont bloqués (le WebSocket n'est pas concerné).
+    Les pages navigateur appellent cette API en cross-origin. APIExpose envoie `Access-Control-Allow-Origin: *` à partir de la 1.1.2 ; sur les versions antérieures, les appels REST depuis un navigateur sont bloqués (le WebSocket n'est pas concerné).
