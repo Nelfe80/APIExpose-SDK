@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://nelfe80.github.io/APIExpose-SDK/</loc>
+        <lastmod>2026-07-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://nelfe80.github.io/APIExpose-SDK/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://nelfe80.github.io/APIExpose-SDK/fr/"/>
+    </url>
+    <url>
+        <loc>https://nelfe80.github.io/APIExpose-SDK/boundaries/</loc>
+        <lastmod>2026-07-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://nelfe80.github.io/APIExpose-SDK/boundaries/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://nelfe80.github.io/APIExpose-SDK/fr/boundaries/"/>
+    </url>
+    <url>
+        <loc>https://nelfe80.github.io/APIExpose-SDK/diagnostics/</loc>
+        <lastmod>2026-07-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://nelfe80.github.io/APIExpose-SDK/diagnostics/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://nelfe80.github.io/APIExpose-SDK/fr/diagnostics/"/>
+    </url>
+    <url>
+        <loc>https://nelfe80.github.io/APIExpose-SDK/events/</loc>
+        <lastmod>2026-07-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://nelfe80.github.io/APIExpose-SDK/events/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://nelfe80.github.io/APIExpose-SDK/fr/events/"/>
+    </url>
+    <url>
+        <loc>https://nelfe80.github.io/APIExpose-SDK/quickstart/</loc>
+        <lastmod>2026-07-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://nelfe80.github.io/APIExpose-SDK/quickstart/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://nelfe80.github.io/APIExpose-SDK/fr/quickstart/"/>
+    </url>
+    <url>
+        <loc>https://nelfe80.github.io/APIExpose-SDK/rest-api/</loc>
+        <lastmod>2026-07-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://nelfe80.github.io/APIExpose-SDK/rest-api/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://nelfe80.github.io/APIExpose-SDK/fr/rest-api/"/>
+    </url>
+    <url>
+        <loc>https://nelfe80.github.io/APIExpose-SDK/streams/</loc>
+        <lastmod>2026-07-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://nelfe80.github.io/APIExpose-SDK/streams/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://nelfe80.github.io/APIExpose-SDK/fr/streams/"/>
+    </url>
+    <url>
+        <loc>https://nelfe80.github.io/APIExpose-SDK/fr/</loc>
+        <lastmod>2026-07-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://nelfe80.github.io/APIExpose-SDK/fr/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://nelfe80.github.io/APIExpose-SDK/"/>
+    </url>
+    <url>
+        <loc>https://nelfe80.github.io/APIExpose-SDK/fr/boundaries/</loc>
+        <lastmod>2026-07-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://nelfe80.github.io/APIExpose-SDK/fr/boundaries/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://nelfe80.github.io/APIExpose-SDK/boundaries/"/>
+    </url>
+    <url>
+        <loc>https://nelfe80.github.io/APIExpose-SDK/fr/diagnostics/</loc>
+        <lastmod>2026-07-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://nelfe80.github.io/APIExpose-SDK/fr/diagnostics/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://nelfe80.github.io/APIExpose-SDK/diagnostics/"/>
+    </url>
+    <url>
+        <loc>https://nelfe80.github.io/APIExpose-SDK/fr/events/</loc>
+        <lastmod>2026-07-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://nelfe80.github.io/APIExpose-SDK/fr/events/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://nelfe80.github.io/APIExpose-SDK/events/"/>
+    </url>
+    <url>
+        <loc>https://nelfe80.github.io/APIExpose-SDK/fr/quickstart/</loc>
+        <lastmod>2026-07-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://nelfe80.github.io/APIExpose-SDK/fr/quickstart/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://nelfe80.github.io/APIExpose-SDK/quickstart/"/>
+    </url>
+    <url>
+        <loc>https://nelfe80.github.io/APIExpose-SDK/fr/rest-api/</loc>
+        <lastmod>2026-07-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://nelfe80.github.io/APIExpose-SDK/fr/rest-api/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://nelfe80.github.io/APIExpose-SDK/rest-api/"/>
+    </url>
+    <url>
+        <loc>https://nelfe80.github.io/APIExpose-SDK/fr/streams/</loc>
+        <lastmod>2026-07-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://nelfe80.github.io/APIExpose-SDK/fr/streams/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://nelfe80.github.io/APIExpose-SDK/streams/"/>
+    </url>
+</urlset>
