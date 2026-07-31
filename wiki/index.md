@@ -1,6 +1,6 @@
 # APIExpose SDK
 
-Public **Data & Event SDK** for [RetroBat APIExpose](https://github.com/Nelfe80/RetroBat-APIExpose).
+Public **Data & Event SDK** for [RetroBat APIExpose](https://nelfe80.github.io/RetroBat-APIExpose/en/).
 
 APIExpose runs next to RetroBat/EmulationStation and exposes what is happening on the cabinet — the selected game, the running emulator, live scores and timers, RetroAchievements, arcade outputs, panel states — over a local REST API and WebSocket streams. This SDK is the supported way to consume that data from your own pages and tools.
 
