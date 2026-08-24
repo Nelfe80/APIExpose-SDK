@@ -1,6 +1,6 @@
 # Périmètre
 
-APIExpose SDK est un **SDK données/événements**. Il vous donne un accès fiable et documenté à ce que sait APIExpose — données, événements et diagnostics. Rien de plus, volontairement.
+APIExpose SDK est un **SDK données/événements**. Il vous donne un accès fiable et documenté à ce que sait APIExpose - données, événements et diagnostics. Rien de plus, volontairement.
 
 ## Dans le périmètre (ce SDK, MIT, gratuit pour toujours)
 

@@ -10,7 +10,7 @@ Clone or download this repository, then copy `packages/js/src/apiexpose-sdk.js` 
 <!DOCTYPE html>
 <html>
 <body>
-  <h1 id="game">—</h1>
+  <h1 id="game">-</h1>
   <script type="module">
     import { APIExposeClient } from './apiexpose-sdk.js';
 
@@ -70,6 +70,6 @@ See [Events](events.md) for the full list.
 
 The three samples in [`samples/html`](https://github.com/Nelfe80/APIExpose-SDK/tree/main/samples/html) run as plain files in any browser:
 
-- **now-playing-basic** — game name, system and artwork card.
-- **score-basic** — live score + timer HUD.
-- **event-debug-monitor** — every event in real time, with a capabilities report.
+- **now-playing-basic** - game name, system and artwork card.
+- **score-basic** - live score + timer HUD.
+- **event-debug-monitor** - every event in real time, with a capabilities report.

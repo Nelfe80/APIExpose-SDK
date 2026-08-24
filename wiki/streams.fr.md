@@ -37,7 +37,7 @@ Les événements sont routés vers les flux selon le préfixe de leur `Type` :
 | `roms` | `roms.`, `rom-pack.`, `romset.` |
 | `system` | `startup.`, `health.`, `version.`, `hub.`, `config.`, `maintenance.`, `rules.`, `notifications.` |
 | `control` | `commands.`, `intent.`, `es-control.` |
-| `esevent` | `esevent.` — disponible **uniquement** ici, pas sur le firehose |
+| `esevent` | `esevent.` - disponible **uniquement** ici, pas sur le firehose |
 
 !!! tip "Firehose ou flux ?"
-    Pour un overlay, le firehose est le plus simple et peu coûteux (trafic loopback). Utilisez les flux filtrés pour des clients contraints ou une isolation stricte par usage — ex. un écran marquee qui n'ouvre que `/ws/marquee`.
+    Pour un overlay, le firehose est le plus simple et peu coûteux (trafic loopback). Utilisez les flux filtrés pour des clients contraints ou une isolation stricte par usage - ex. un écran marquee qui n'ouvre que `/ws/marquee`.

@@ -6,7 +6,7 @@
 
 - the connection state and API base URL,
 - a one-line capabilities report (`apiexpose=<version> sdk=<version> | health:yes context:yes …`),
-- every event live — timestamp, raw type, payload preview — with Pause/Clear.
+- every event live - timestamp, raw type, payload preview - with Pause/Clear.
 
 Use it whenever an overlay "doesn't update": if the monitor shows the events, the problem is in your page; if not, it's between APIExpose and the emulator.
 
@@ -21,11 +21,11 @@ const caps = await client.getCapabilities();
 //                hiscores: true, retroachievements: true } }
 ```
 
-Capabilities are **context-dependent**: `panels` answers 404 with no game selected, `hiscores` answers 400 without a supported game, `retroachievements` depends on the configured account. A `false` can mean "not now", not "never" — re-probe after `game.changed`. Schema: [`schemas/capabilities.schema.json`](https://github.com/Nelfe80/APIExpose-SDK/blob/main/schemas/capabilities.schema.json).
+Capabilities are **context-dependent**: `panels` answers 404 with no game selected, `hiscores` answers 400 without a supported game, `retroachievements` depends on the configured account. A `false` can mean "not now", not "never" - re-probe after `game.changed`. Schema: [`schemas/capabilities.schema.json`](https://github.com/Nelfe80/APIExpose-SDK/blob/main/schemas/capabilities.schema.json).
 
 ## `doctor()`
 
-`getCapabilities()` plus connectivity and event statistics — designed to be dumped into a support message:
+`getCapabilities()` plus connectivity and event statistics - designed to be dumped into a support message:
 
 ```js
 const report = await client.doctor();
@@ -42,5 +42,5 @@ const report = await client.doctor();
 | `getCurrentGame()` throws 404 | empty context right after APIExpose start | fall back to `getState()` (see [REST API](rest-api.md)) |
 | Artwork 404 | media not in the APIExpose store, or hand-built URL | always go through `mediaUrl()` on `details.*` values; APIExpose is the single media source (`/api/v1/media/...`) |
 | No `score.changed` / `timer.changed` | system without score support, or nothing running | check the debug monitor for `score.live.*` |
-| Events stop after RetroBat restart | none — the SDK reconnects | wait for `connection.restored` (verify in the monitor) |
+| Events stop after RetroBat restart | none - the SDK reconnects | wait for `connection.restored` (verify in the monitor) |
 | Page does nothing at all as `file://` in a strict browser profile | ES module loading restrictions | serve the folder over `http://` instead |

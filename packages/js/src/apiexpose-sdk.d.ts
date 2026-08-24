@@ -1,6 +1,6 @@
 /**
  * TypeScript definitions for the APIExpose SDK (JavaScript).
- * The runtime is plain ESM (apiexpose-sdk.js) — these types are hand-maintained.
+ * The runtime is plain ESM (apiexpose-sdk.js) - these types are hand-maintained.
  */
 
 export declare const SDK_VERSION: string;

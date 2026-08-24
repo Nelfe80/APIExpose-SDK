@@ -24,7 +24,7 @@ client.on('game.changed', (event) => {
 });
 ```
 
-Le type brut est **toujours réémis tel quel** en plus de tout alias — rien n'est masqué. Le JSON Schema de l'enveloppe : [`schemas/event.schema.json`](https://github.com/Nelfe80/APIExpose-SDK/blob/main/schemas/event.schema.json).
+Le type brut est **toujours réémis tel quel** en plus de tout alias. Le JSON Schema de l'enveloppe : [`schemas/event.schema.json`](https://github.com/Nelfe80/APIExpose-SDK/blob/main/schemas/event.schema.json).
 
 ## Alias normalisés
 
@@ -74,4 +74,4 @@ screen.snapshot
 Pendant le jeu (y compris le mode démo d'ES), `score.live.changed` et `timer.live.changed` circulent pour les systèmes avec support de score.
 
 !!! note "Les payloads varient"
-    Les payloads sont propres à chaque événement et peuvent évoluer avec APIExpose. Traitez les champs inconnus comme optionnels — le [Event Debug Monitor](diagnostics.md) est le moyen le plus rapide d'inspecter les payloads exacts de votre installation.
+    Les payloads sont propres à chaque événement et peuvent évoluer avec APIExpose. Traitez les champs inconnus comme optionnels - le [Event Debug Monitor](diagnostics.md) est le moyen le plus rapide d'inspecter les payloads exacts de votre installation.

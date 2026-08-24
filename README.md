@@ -1,6 +1,6 @@
 # APIExpose SDK
 
-Public **Data & Event SDK** for [RetroBat APIExpose](https://github.com/Nelfe80/RetroBat-APIExpose) — build dashboards and integrations on top of the live RetroBat/EmulationStation context: current game, scores, timers, RetroAchievements, arcade outputs, panel states and more.
+Public **Data & Event SDK** for [RetroBat APIExpose](https://github.com/Nelfe80/RetroBat-APIExpose) - build dashboards and integrations on top of the live RetroBat/EmulationStation context: current game, scores, timers, RetroAchievements, arcade outputs, panel states and more.
 
 - **Zero build**: one ES module, no bundler, no npm install required. Works in any modern browser.
 - **REST + WebSocket**: typed helpers for the REST endpoints, an event bus with normalized aliases, prefix wildcards and automatic reconnection.
@@ -37,7 +37,7 @@ Requires APIExpose **≥ 1.1.2** running on the same machine (its API listens on
 |---|---|
 | [`samples/html/now-playing-basic`](samples/html/now-playing-basic) | Current game name, system and artwork |
 | [`samples/html/score-basic`](samples/html/score-basic) | Live score and timer HUD |
-| [`samples/html/event-debug-monitor`](samples/html/event-debug-monitor) | Every event in real time + capabilities report — your debugging companion |
+| [`samples/html/event-debug-monitor`](samples/html/event-debug-monitor) | Every event in real time + capabilities report - your debugging companion |
 
 Open them straight in a browser. Each sample reads an optional `config.json` next to it (host/port).
 
@@ -55,4 +55,4 @@ APIExpose SDK is a **Data/Event SDK**: data access, events and diagnostics only.
 
 SDK public **données & événements** pour APIExpose : construisez tableaux de bord et intégrations sur le contexte live de RetroBat (jeu courant, scores, timers, RetroAchievements, sorties arcade…). **Zéro build** : un module ES à importer, utilisable tel quel dans n'importe quel navigateur. La documentation complète (FR/EN) est sur le wiki : https://nelfe80.github.io/APIExpose-SDK/
 
-Ce SDK se limite volontairement aux données, événements et diagnostics — pas de designer visuel, pas de widgets, pas de thèmes.
+Ce SDK se limite volontairement aux données, événements et diagnostics.

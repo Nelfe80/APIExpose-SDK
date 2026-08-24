@@ -1,4 +1,4 @@
-// Event Debug Monitor — every APIExpose event, live, with a doctor summary.
+// Event Debug Monitor - every APIExpose event, live, with a doctor summary.
 // The diagnostics companion for overlay/integration development.
 import { APIExposeClient } from '../../../packages/js/src/apiexpose-sdk.js';
 
@@ -37,7 +37,7 @@ client.on('*', (event) => {
   const row = document.createElement('tr');
   const time = new Date(event.timestamp);
   const stamp = Number.isNaN(time.getTime())
-    ? '—'
+    ? '-'
     : time.toLocaleTimeString(undefined, { hour12: false }) + '.' + String(time.getMilliseconds()).padStart(3, '0');
   let preview;
   try {
@@ -56,7 +56,7 @@ client.on('*', (event) => {
 function setStatus(connected) {
   el.dot.className = `dot ${connected ? 'on' : 'off'}`;
   el.status.textContent = connected
-    ? `connected — ${client.baseUrl}`
+    ? `connected - ${client.baseUrl}`
     : `waiting for APIExpose on ${client.baseUrl}…`;
 }
 

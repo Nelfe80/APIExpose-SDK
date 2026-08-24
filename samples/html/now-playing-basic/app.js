@@ -1,4 +1,4 @@
-// Now Playing (basic) — shows the current game name, system and artwork.
+// Now Playing (basic) - shows the current game name, system and artwork.
 // SDK demo only: sober on purpose. Premium overlays belong to Retro Creator.
 import { APIExposeClient } from '../../../packages/js/src/apiexpose-sdk.js';
 
@@ -39,7 +39,7 @@ function render(client, data) {
   const art = findValue(data, ['logo', 'wheel', 'marquee', 'image', 'thumbnail', 'boxart']);
 
   if (!name && !system) return;
-  el.game.textContent = name ?? '—';
+  el.game.textContent = name ?? '-';
   el.system.textContent = system ?? '';
   const artUrl = client.mediaUrl(art);
   if (artUrl) {

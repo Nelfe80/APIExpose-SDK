@@ -1,6 +1,6 @@
 # REST API
 
-All helpers return promises and throw on HTTP errors (including 404 when no context exists yet — catch accordingly). Base URL: `http://127.0.0.1:12345`. The full interactive reference is APIExpose's own **Swagger UI** at `http://127.0.0.1:12345/swagger`.
+All helpers return promises and throw on HTTP errors (including 404 when no context exists yet - catch accordingly). Base URL: `http://127.0.0.1:12345`. The full interactive reference is APIExpose's own **Swagger UI** at `http://127.0.0.1:12345/swagger`.
 
 | Helper | Endpoint | Returns |
 |---|---|---|
@@ -14,7 +14,7 @@ All helpers return promises and throw on HTTP errors (including 404 when no cont
 | `getCurrentPanel()` | `GET /api/v1/panels/current` | resolved control-panel layout (404 without a game) |
 
 !!! note "Arcade outputs are event-only"
-    Arcade/MAME output signals (lamps…) change too fast for a REST snapshot to be meaningful. Subscribe to `arcade.output.changed` instead — see [Events](events.md).
+    Arcade/MAME output signals (lamps…) change too fast for a REST snapshot to be meaningful. Subscribe to `arcade.output.changed` instead - see [Events](events.md).
 
 ## Context lifecycle
 
@@ -31,7 +31,7 @@ async function currentGameOrNull(client) {
 }
 ```
 
-## Media URLs — `mediaUrl(path)`
+## Media URLs - `mediaUrl(path)`
 
 **APIExpose is the single media source.** Its canonical media store consolidates and enriches everything (artwork, wheels, marquees, mixes, manuals, videos…), and `details.*` / `details.extras.*` expose ready-to-use `/api/v1/media/...` URLs:
 

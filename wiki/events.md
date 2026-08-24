@@ -24,7 +24,7 @@ client.on('game.changed', (event) => {
 });
 ```
 
-The raw type is **always re-emitted as-is** alongside any alias — nothing is hidden. The JSON Schema of the envelope lives in [`schemas/event.schema.json`](https://github.com/Nelfe80/APIExpose-SDK/blob/main/schemas/event.schema.json).
+The raw type is **always re-emitted as-is** alongside any alias. The JSON Schema of the envelope lives in [`schemas/event.schema.json`](https://github.com/Nelfe80/APIExpose-SDK/blob/main/schemas/event.schema.json).
 
 ## Normalized aliases
 
@@ -74,4 +74,4 @@ screen.snapshot
 During gameplay (including ES demo mode) `score.live.changed` and `timer.live.changed` flow for systems with score support.
 
 !!! note "Payload shapes vary"
-    Payloads are event-specific and may evolve with APIExpose. Treat unknown fields as optional — the [Event Debug Monitor](diagnostics.md) is the quickest way to inspect the exact payloads your installation produces.
+    Payloads are event-specific and may evolve with APIExpose. Treat unknown fields as optional - the [Event Debug Monitor](diagnostics.md) is the quickest way to inspect the exact payloads your installation produces.

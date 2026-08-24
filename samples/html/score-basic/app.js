@@ -1,4 +1,4 @@
-// Score HUD (basic) — live score and timer from the APIExpose streams.
+// Score HUD (basic) - live score and timer from the APIExpose streams.
 // The score/timer streams only carry data for games instrumented by APIExpose
 // (arcade with .MEM definitions, wrapper-supported systems…).
 import { APIExposeClient } from '../../../packages/js/src/apiexpose-sdk.js';
@@ -58,8 +58,8 @@ client.on('timer.changed', (event) => {
 
 // New game: reset the HUD until fresh data arrives.
 client.on('game.changed', () => {
-  el.score.textContent = '—';
-  el.timer.textContent = '—';
+  el.score.textContent = '-';
+  el.timer.textContent = '-';
 });
 
 client.connect();

@@ -1,6 +1,6 @@
 # Scope
 
-APIExpose SDK is a **Data/Event SDK**. It gives you reliable, documented access to what APIExpose knows — data, events and diagnostics. Nothing more, on purpose.
+APIExpose SDK is a **Data/Event SDK**. It gives you reliable, documented access to what APIExpose knows - data, events and diagnostics. Nothing more, on purpose.
 
 ## In scope (this SDK, MIT, free forever)
 

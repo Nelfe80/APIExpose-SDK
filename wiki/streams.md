@@ -37,7 +37,7 @@ Events are routed to streams by their `Type` prefix:
 | `roms` | `roms.`, `rom-pack.`, `romset.` |
 | `system` | `startup.`, `health.`, `version.`, `hub.`, `config.`, `maintenance.`, `rules.`, `notifications.` |
 | `control` | `commands.`, `intent.`, `es-control.` |
-| `esevent` | `esevent.` — **only** available here, not on the firehose |
+| `esevent` | `esevent.` - **only** available here, not on the firehose |
 
 !!! tip "Firehose or streams?"
-    For overlays the firehose is simplest and cheap (loopback traffic). Use filtered streams when you embed the SDK in constrained clients or want hard isolation per concern — e.g. a marquee display only opening `/ws/marquee`.
+    For overlays the firehose is simplest and cheap (loopback traffic). Use filtered streams when you embed the SDK in constrained clients or want hard isolation per concern - e.g. a marquee display only opening `/ws/marquee`.

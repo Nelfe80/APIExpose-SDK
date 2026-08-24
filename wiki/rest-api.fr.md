@@ -1,6 +1,6 @@
 # API REST
 
-Tous les helpers retournent des promesses et lèvent une erreur sur les codes HTTP d'échec (y compris 404 quand aucun contexte n'existe encore — prévoyez un catch). URL de base : `http://127.0.0.1:12345`. La référence interactive complète est le **Swagger UI** d'APIExpose : `http://127.0.0.1:12345/swagger`.
+Tous les helpers retournent des promesses et lèvent une erreur sur les codes HTTP d'échec (y compris 404 quand aucun contexte n'existe encore - prévoyez un catch). URL de base : `http://127.0.0.1:12345`. La référence interactive complète est le **Swagger UI** d'APIExpose : `http://127.0.0.1:12345/swagger`.
 
 | Helper | Endpoint | Retourne |
 |---|---|---|
@@ -14,7 +14,7 @@ Tous les helpers retournent des promesses et lèvent une erreur sur les codes HT
 | `getCurrentPanel()` | `GET /api/v1/panels/current` | layout du panel résolu (404 sans jeu) |
 
 !!! note "Les sorties arcade sont uniquement événementielles"
-    Les signaux de sortie arcade/MAME (lampes…) changent trop vite pour qu'un instantané REST ait un sens. Abonnez-vous plutôt à `arcade.output.changed` — voir [Événements](events.md).
+    Les signaux de sortie arcade/MAME (lampes…) changent trop vite pour qu'un instantané REST ait un sens. Abonnez-vous plutôt à `arcade.output.changed` - voir [Événements](events.md).
 
 ## Cycle de vie du contexte
 
@@ -31,7 +31,7 @@ async function currentGameOrNull(client) {
 }
 ```
 
-## URLs de médias — `mediaUrl(path)`
+## URLs de médias - `mediaUrl(path)`
 
 **APIExpose est la source média unique.** Son media store canonique consolide et enrichit tout (artwork, wheels, marquees, mixes, manuels, vidéos…), et `details.*` / `details.extras.*` exposent des URLs `/api/v1/media/...` prêtes à l'emploi :
 

@@ -2,15 +2,15 @@
 
 SDK public **données & événements** pour [RetroBat APIExpose](https://nelfe80.github.io/RetroBat-APIExpose/).
 
-APIExpose tourne à côté de RetroBat/EmulationStation et expose ce qui se passe sur la borne — jeu sélectionné, émulateur en cours, scores et timers live, RetroAchievements, sorties arcade, états de panel — via une API REST locale et des flux WebSocket. Ce SDK est la voie officielle pour consommer ces données depuis vos pages et outils.
+APIExpose tourne à côté de RetroBat/EmulationStation et expose ce qui se passe sur la borne - jeu sélectionné, émulateur en cours, scores et timers live, RetroAchievements, sorties arcade, états de panel - via une API REST locale et des flux WebSocket. Ce SDK est la voie officielle pour consommer ces données depuis vos pages et outils.
 
 ## Ce que vous obtenez
 
-- **Client JavaScript zéro build** — un module ES, pas de bundler, pas de npm. Importez-le depuis un simple fichier HTML.
-- **Bus d'événements** — abonnez-vous aux événements bruts, aux alias normalisés (`game.changed`, `score.changed`, `achievement.unlocked`…), aux jokers par préfixe (`retroachievements.*`) ou à tout (`*`).
-- **Helpers REST** — jeu courant, état du frontend, hiscores, session RetroAchievements, layout du panel, URLs de médias.
-- **Résilience** — reconnexion automatique avec backoff exponentiel ; votre page peut démarrer avant RetroBat.
-- **Diagnostics** — `getCapabilities()`, `doctor()` et le sample [Event Debug Monitor](diagnostics.md) prêt à l'emploi.
+- **Client JavaScript zéro build** - un module ES, pas de bundler, pas de npm. Importez-le depuis un simple fichier HTML.
+- **Bus d'événements** - abonnez-vous aux événements bruts, aux alias normalisés (`game.changed`, `score.changed`, `achievement.unlocked`…), aux jokers par préfixe (`retroachievements.*`) ou à tout (`*`).
+- **Helpers REST** - jeu courant, état du frontend, hiscores, session RetroAchievements, layout du panel, URLs de médias.
+- **Résilience** - reconnexion automatique avec backoff exponentiel ; votre page peut démarrer avant RetroBat.
+- **Diagnostics** - `getCapabilities()`, `doctor()` et le sample [Event Debug Monitor](diagnostics.md) prêt à l'emploi.
 
 ## Prérequis
 
@@ -23,9 +23,9 @@ APIExpose écoute sur `http://127.0.0.1:12345` (REST + WebSocket) sur la machine
 
 ## Par où continuer
 
-- [Démarrage rapide](quickstart.md) — première intégration en cinq minutes.
-- [Événements](events.md) — types, alias et payloads.
-- [Flux WebSocket](streams.md) — les endpoints et leur routage.
-- [API REST](rest-api.md) — les helpers et les endpoints derrière.
-- [Diagnostics](diagnostics.md) — capabilities, doctor et dépannage.
-- [Périmètre](boundaries.md) — ce que couvre ce SDK.
+- [Démarrage rapide](quickstart.md) - première intégration en cinq minutes.
+- [Événements](events.md) - types, alias et payloads.
+- [Flux WebSocket](streams.md) - les endpoints et leur routage.
+- [API REST](rest-api.md) - les helpers et les endpoints derrière.
+- [Diagnostics](diagnostics.md) - capabilities, doctor et dépannage.
+- [Périmètre](boundaries.md) - ce que couvre ce SDK.

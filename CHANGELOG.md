@@ -5,7 +5,7 @@ Format: [Keep a Changelog](https://keepachangelog.com/), versioning: [SemVer](ht
 
 ## [0.1.0] - 2026-07-08
 
-First public release — JavaScript SDK MVP.
+First public release - JavaScript SDK MVP.
 
 ### Added
 - `@apiexpose/sdk` zero-build ES module (`packages/js`): `APIExposeClient` with
@@ -16,7 +16,7 @@ First public release — JavaScript SDK MVP.
   (`retroachievements.*`, `*`), automatic reconnection with exponential backoff
   and jitter, `connection.lost` / `connection.restored` lifecycle events.
 - `mediaUrl()` resolves media paths against APIExpose's canonical media store
-  (`/api/v1/media/<path>`) — APIExpose is the single consolidated media source;
+  (`/api/v1/media/<path>`) - APIExpose is the single consolidated media source;
   `details.*` and `details.extras.*` expose ready-to-use API URLs.
 - Diagnostics: `getCapabilities()` endpoint probe and `doctor()` report.
 - TypeScript definitions (`apiexpose-sdk.d.ts`).

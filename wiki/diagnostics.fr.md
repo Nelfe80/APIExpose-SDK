@@ -6,7 +6,7 @@
 
 - l'état de connexion et l'URL de base de l'API,
 - un rapport de capabilities sur une ligne (`apiexpose=<version> sdk=<version> | health:yes context:yes …`),
-- chaque événement en live — horodatage, type brut, aperçu du payload — avec Pause/Clear.
+- chaque événement en live - horodatage, type brut, aperçu du payload - avec Pause/Clear.
 
 Utilisez-le dès qu'un overlay « ne se met pas à jour » : si le monitor montre les événements, le problème est dans votre page ; sinon, il est entre APIExpose et l'émulateur.
 
@@ -21,11 +21,11 @@ const caps = await client.getCapabilities();
 //                hiscores: true, retroachievements: true } }
 ```
 
-Les capabilities sont **dépendantes du contexte** : `panels` répond 404 sans jeu sélectionné, `hiscores` répond 400 sans jeu supporté, `retroachievements` dépend du compte configuré. Un `false` peut vouloir dire « pas maintenant », pas « jamais » — resondez après `game.changed`. Schéma : [`schemas/capabilities.schema.json`](https://github.com/Nelfe80/APIExpose-SDK/blob/main/schemas/capabilities.schema.json).
+Les capabilities sont **dépendantes du contexte** : `panels` répond 404 sans jeu sélectionné, `hiscores` répond 400 sans jeu supporté, `retroachievements` dépend du compte configuré. Un `false` peut vouloir dire « pas maintenant », pas « jamais » - resondez après `game.changed`. Schéma : [`schemas/capabilities.schema.json`](https://github.com/Nelfe80/APIExpose-SDK/blob/main/schemas/capabilities.schema.json).
 
 ## `doctor()`
 
-`getCapabilities()` plus la connectivité et les statistiques d'événements — conçu pour être collé dans un message de support :
+`getCapabilities()` plus la connectivité et les statistiques d'événements - conçu pour être collé dans un message de support :
 
 ```js
 const report = await client.doctor();
@@ -42,5 +42,5 @@ const report = await client.doctor();
 | `getCurrentGame()` lève un 404 | contexte vide juste après le démarrage d'APIExpose | replier sur `getState()` (voir [API REST](rest-api.md)) |
 | Visuels en 404 | média absent du store APIExpose, ou URL construite à la main | passez toujours par `mediaUrl()` sur les valeurs `details.*` ; APIExpose est la source média unique (`/api/v1/media/...`) |
 | Pas de `score.changed` / `timer.changed` | système sans support de score, ou rien ne tourne | vérifier `score.live.*` dans le debug monitor |
-| Les événements s'arrêtent après un redémarrage de RetroBat | aucune — le SDK se reconnecte | attendre `connection.restored` (vérifiable dans le monitor) |
+| Les événements s'arrêtent après un redémarrage de RetroBat | aucune - le SDK se reconnecte | attendre `connection.restored` (vérifiable dans le monitor) |
 | La page ne fait rien en `file://` dans un profil navigateur strict | restrictions de chargement des modules ES | servir le dossier en `http://` |

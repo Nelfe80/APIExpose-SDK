@@ -1,5 +1,5 @@
 /**
- * APIExpose SDK for JavaScript — Data/Event client for APIExpose (RetroBat).
+ * APIExpose SDK for JavaScript - Data/Event client for APIExpose (RetroBat).
  *
  * Zero-build ES module: import it directly from a <script type="module"> in any
  * browser, no npm, no bundler required.
@@ -10,9 +10,9 @@
  *   await client.connect();
  *
  * Scope (by design): data + events + diagnostics. No designer, no premium
- * widgets, no theme engine — those belong to Retro Creator.
+ * widgets, no theme engine - those belong to Retro Creator.
  *
- * License: MIT — https://github.com/Nelfe80/APIExpose-SDK
+ * License: MIT - https://github.com/Nelfe80/APIExpose-SDK
  */
 
 export const SDK_VERSION = '0.1.0';
@@ -121,7 +121,7 @@ export class APIExposeClient {
   /**
    * Opens the WebSocket connection(s) and resolves once at least one socket
    * is open. With autoReconnect (default), it keeps retrying in the
-   * background even if APIExpose is not started yet — safe to call at
+   * background even if APIExpose is not started yet - safe to call at
    * overlay load time.
    */
   async connect() {
